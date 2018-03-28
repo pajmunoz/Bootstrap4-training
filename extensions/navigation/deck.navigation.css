@@ -13,11 +13,11 @@
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background: #888;
+  background: white;
   border-radius: 16px;
 }
 .deck-prev-link:hover, .deck-prev-link:focus, .deck-prev-link:active, .deck-prev-link:visited, .deck-next-link:hover, .deck-next-link:focus, .deck-next-link:active, .deck-next-link:visited {
-  color: #fff;
+  color: black;
 }
 
 .deck-prev-link {
