@@ -1,0 +1,40 @@
+<h2>Reordenar columnas</h2>
+<ol>
+    <li>
+        <h3>.offset-</h3>
+        <p>Se puede mover columnas hacia la derecha usando la clase <span>'.offset-md-*'</span>. Estas clases aumentan el margen izquierdo de una columna por n columnas. Por ejemplo, <span>'.offset-md-4'</span> mueve <span>.col-md-4</span> 4 columnas hacia la derecha.</p>
+    </li>
+    <li>
+		<pre>
+			<code class="html">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">.col-md-4</div>
+					<div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+					<div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+				</div>
+			</div>
+		</pre>
+    </li>
+    <li>
+        <h3>Breakpoints</h3>
+        <p>Además de establecer un breakpoint de la columna es necesario resetear el offset.</p>
+    </li>
+    <li>
+		<pre>
+			<code class="html">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+					<div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+				</div>
+			</div>
+		</pre>
+    </li>
+</ol>

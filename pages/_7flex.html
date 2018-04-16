@@ -1,0 +1,82 @@
+<h2>Flex</h2>
+<ol>
+	<li>
+		<h3>Usando Flex en bootstrap</h3>
+		<p>Se puede manejar la composición, la alineación y el tamaño de las columnas y otros componentes con las utilidades de Flexbox. Existen variantes para flex y para inline-flex y sus variantes responsive.</p>
+	</li>
+	<li>
+		<pre>
+			<code class="html">
+			<div class="d-flex p-2">I'm a flexbox container!</div>
+			<div class="d-inline-flex p-2">I'm an inline flexbox container!</div>
+		</pre>
+	</li>
+	<li>
+		<h3>Dirección</h3>
+		<p>Se puede definir la dirección como horizontal o vertical. '.flex-row' o '.flex-row-reverse' para dirección horizontal y '.flex-column' o '.flex-column-reverse' para dirección vertical.</p>
+	</li>
+	<li>
+		<pre>
+			<div class="d-flex flex-row">
+				<div class="p-2">Flex item 1</div>
+				<div class="p-2">Flex item 2</div>
+				<div class="p-2">Flex item 3</div>
+			</div>
+			<div class="d-flex flex-column">
+				<div class="p-2">Flex item 1</div>
+				<div class="p-2">Flex item 2</div>
+				<div class="p-2">Flex item 3</div>
+			</div>
+		</pre>
+	</li>
+	<li>
+		<h3>Justificación</h3>
+		<p>Se puede cambiar la alineación de los elementos con '.justify-content'</p>
+	</li>
+	<li>
+		<pre>
+			<div class="d-flex justify-content-start">...</div>
+			<div class="d-flex justify-content-end">...</div>
+			<div class="d-flex justify-content-center">...</div>
+			<div class="d-flex justify-content-between">...</div>
+			<div class="d-flex justify-content-around">...</div>
+		</pre>
+	</li>
+	<li>
+		<h3>Alineación</h3>
+		<p>Use align-items utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if flex-direction: column). Choose from start, end, center, baseline, or stretch (browser default). La utilidad '.align-items' en contenedores flexbox se usa para cambiar la alineación horizontal o vertical. Se puede alinear un elemento con '.align-self'</p>
+	</li>
+	<li>
+		<pre>
+			<div class="d-flex align-items-start">...</div>
+			<div class="d-flex align-items-end">...</div>
+			<div class="d-flex align-items-center">...</div>
+			<div class="d-flex align-items-baseline">...</div>
+			<div class="d-flex align-items-stretch">...</div>
+		</pre>
+	</li>
+	<li>
+		<h3>Wrapping</h3>
+		<p>Se puede hacer que el contenido pase a una nueva linea si no entra en el contenedor o que lo exceda</p>
+	</li>
+	<li>
+		<pre>
+			<div class="d-flex flex-wrap">
+			...
+			</div>
+		</pre>
+	</li>
+	<li>
+		<h3>Orden</h3>
+		<p>Se puede cambiar el orden en que se muestran los elementos con '.order'</p>
+	</li>
+	<li>
+		<pre>
+			<div class="d-flex flex-nowrap">
+				<div class="order-3 p-2">First flex item</div>
+				<div class="order-2 p-2">Second flex item</div>
+				<div class="order-1 p-2">Third flex item</div>
+			</div>
+		</pre>
+	</li>
+</ol>
