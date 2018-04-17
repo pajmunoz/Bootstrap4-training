@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <script src="jquery.min.js"></script>
-    
+
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
     <script src="modernizr.custom.js"></script>
@@ -17,8 +17,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
     <script src="highlight.min.js"></script>
     <script>
-       
-    </script>    
+
+    </script>
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" media="screen" href="themes/style/neon.css">
@@ -29,24 +29,7 @@
     <link rel="stylesheet" media="screen" href="../extensions/status/deck.status.css">
     <link rel="stylesheet" media="screen" href="../extensions/scale/deck.scale.css">
     <link rel="stylesheet" media="screen" href="../themes/transition/horizontal-slide.css">
-    <script>
-            setTimeout(function () {
-                hljs.initHighlightingOnLoad();
-                jQuery(document).ready(function ($) {
-                    $('pre code').each(function (i, block) {
-                        hljs.highlightBlock(block);
-                    });
-    
-                    $("code").each(function () {
-                        var re = new RegExp("<", "g");
-                        var re2 = new RegExp(">", "g");
-                        $(this).html($(this).html().replace(re, "&lt;").replace(re2, "&gt;"));
-    
-    
-                    })
-                });
-            }, 100);
-        </script>
+
 </head>
 
 <body>
@@ -54,10 +37,294 @@
 
     <div class="deck-container">
         <section class="slide bg1" id="title-slide">
-            <div w3-include-html="pages/_titulo.html"></div>
+            <h1>Acelerando
+                <br>con Bootstrap 4
+                <br>
+                <span>por Pablo Jara y Pablo Accorinti</span>
+            </h1>
+            <figure>
+                <img width="200" src="bg/boot.png" alt="">
+            </figure>
         </section>
-        <section class="slide" id="intro">
-            <div w3-include-html="pages/_1grid.html"></div>
+        <section class="slide" id="1">
+            <h2>GRILLA</h2>
+            <ol>
+                <li>
+                    <h3>Container</h3>
+                    <p>
+                        <span>'.container'</span> Mantiene el contenido centrado y alineado horizontalmente, tiene una variable
+                        <span>'.container-fluid'</span>, para tener un
+                        <span>'width:100%;'</span>
+                    </p>
+                </li>
+                <li>
+                    <h3>Row</h3>
+                    <p>
+                        <span>'.row'</span> Son la envoltura de las columnas</p>
+                </li>
+                <li>
+                    <h3>Columnas</h3>
+                    <p>
+                        <span>'.col'</span> Cada columna tiene un Gutter, que es un padding para distanciar una de otra, alineado
+                        al lado izquierdo.</p>
+                </li>
+                <li>
+                    <pre>
+                        <code class="html">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm">
+                                One of three columns
+                                </div>
+                                <div class="col-sm">
+                                One of three columns
+                                </div>
+                                <div class="col-sm">
+                                One of three columns
+                                </div>
+                            </div>
+                        </div>
+                        </code>
+                    </pre>
+                </li>
+            </ol>
+        </section>
+        <section class="slide" id="5">
+            <h2>Reordenar columnas</h2>
+            <ol>
+                <li>
+                    <h3>.offset-</h3>
+                    <p>Se puede mover columnas hacia la derecha usando la clase
+                        <span>'.offset-md-*'</span>. Estas clases aumentan el margen izquierdo de una columna por n columnas. Por
+                        ejemplo,
+                        <span>'.offset-md-4'</span> mueve
+                        <span>.col-md-4</span> 4 columnas hacia la derecha.</p>
+                </li>
+                <li>
+                    <pre>
+            			<code class="html">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+    </div>
+</div>
+                        </code>
+            		</pre>
+                </li>                
+            </ol>
+        </section>
+        <section class="slide" id="6">
+            <h2>Reordenar columnas</h2>
+            <ol>                
+                <li>
+                    <h3>Breakpoints</h3>
+                    <p>Además de establecer un breakpoint de la columna es necesario resetear el offset.</p>
+                </li>
+                <li>
+                    <pre>
+                    			<code class="html">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+    </div>
+</div>
+                                </code>
+                    		</pre>
+                </li>
+            </ol>
+        </section>
+        <section class="slide" id="7">
+            <h2>Reordenar columnas</h2>
+            <ol>
+                <li>
+                    <h3>.ml- o .mr-</h3>
+                    <p>Se puede definir el margen.</p>
+                </li>
+                <li>
+                    <pre>
+            			<code class="html">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+        <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+    </div>
+    <div class="row">
+        <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+        <div class="col-auto">.col-auto</div>
+    </div>
+</div>
+                        </code>
+            		</pre>
+                </li>
+                <li>
+                    <h3>Opciones</h3>
+                    <ul>
+                        <li>0 - elimina el margen</li>
+                        <li>1 - .25rem!important</li>
+                        <li>2 - .5rem!important</li>
+                        <li>3 - 1rem!important</li>
+                        <li>4 - 1.5rem!important</li>
+                        <li>5 - 3rem!important</li>
+                        <li>auto - margin auto</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section class="slide" id="8">
+            <h2>Flex</h2>
+            <ol>  
+                <li>
+                    <h3>Orden</h3>
+                    <p>Se puede cambiar el orden en que se muestran los elementos con '.order'</p>
+                </li>
+                <li>
+                    <pre>
+                        <code class="html">
+<div class="d-flex flex-nowrap">
+    <div class="order-3 p-2">First flex item</div>
+    <div class="order-2 p-2">Second flex item</div>
+    <div class="order-1 p-2">Third flex item</div>
+</div>
+                    </code>
+        		</pre>
+                </li>
+            </ol>
+        </section>
+        <section class="slide" id="9">
+            <h2>Flex</h2>
+            <ol>
+            <li>
+                <h3>Dirección</h3>
+                <p>Se puede definir la dirección como horizontal o vertical. '.flex-row' o '.flex-row-reverse' para dirección horizontal
+                    y '.flex-column' o '.flex-column-reverse' para dirección vertical.</p>
+            </li>
+            <li>
+                <pre>
+                    <code class="html">
+<div class="d-flex flex-row">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+<div class="d-flex flex-column">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+                    </code>
+                </pre>
+            </li>
+            </ol>
+        </section>
+        <section class="slide" id="10">
+            <h2>Flex</h2>
+            <ol>
+                <li>
+                    <h3>Usando Flex en bootstrap</h3>
+                    <p>Se puede manejar la composición, la alineación y el tamaño de las columnas y otros componentes con las utilidades de
+                        Flexbox. Existen variantes para flex y para inline-flex y sus variantes responsive.</p>
+                </li>
+                <li>
+                    <pre>
+                        <code class="html">
+<div class="d-flex p-2">I'm a flexbox container!</div>
+<div class="d-inline-flex p-2">I'm an inline flexbox container!</div>
+                        </code>
+                    </pre>
+                </li>
+            </ol>
+        </section>
+        <section class="slide" id="11">
+            <h2>Flex</h2>
+            <ol>
+                <li>
+                    <h3>Justificación</h3>
+                    <p>Se puede cambiar la alineación de los elementos con '.justify-content'</p>
+                </li>
+                <li>
+                    <pre>
+                            <code class="html">
+<div class="d-flex justify-content-start">...</div>
+<div class="d-flex justify-content-end">...</div>
+<div class="d-flex justify-content-center">...</div>
+<div class="d-flex justify-content-between">...</div>
+<div class="d-flex justify-content-around">...</div>
+                        </code>
+                    </pre>
+                </li>
+            </ol>
+        </section>
+        <section class="slide" id="12">
+            <h2>Flex</h2>
+            <ol>
+                    <li>
+                        <h3>Alineación</h3>
+                        <p>Use align-items utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to
+                            start, x-axis if flex-direction: column). Choose from start, end, center, baseline, or stretch (browser default).
+                            La utilidad '.align-items' en contenedores flexbox se usa para cambiar la alineación horizontal o vertical. Se puede
+                            alinear un elemento con '.align-self'</p>
+                    </li>
+                    <li>
+                        <pre>
+                                <code class="html">
+<div class="d-flex align-items-start">...</div>
+<div class="d-flex align-items-end">...</div>
+<div class="d-flex align-items-center">...</div>
+<div class="d-flex align-items-baseline">...</div>
+<div class="d-flex align-items-stretch">...</div>
+                            </code>
+                        </pre>
+                    </li>
+            </ol>
+        </section>
+        <section class="slide" id="13">
+            <h2>Flex</h2>
+            <ol>
+                <li>
+                    <h3>Wrapping</h3>
+                    <p>Se puede hacer que el contenido pase a una nueva linea si no entra en el contenedor o que lo exceda</p>
+                </li>
+                <li>
+                    <pre>
+                        <code class="html">
+<div class="d-flex flex-wrap">
+...
+</div>
+                        </code>
+                    </pre>
+                </li>
+            </ol>
+        </section>
+        <section class="slide" id="100">
+            <h2>Sass en bootstrap</h2>
+            <ol>
+                <li>
+                    <h3>Theming en bootstrap</h3>
+                    <p>Customize Bootstrap 4 with our new built-in Sass variables for global style preferences for easy theming
+                        and component changes. Se puede customizar </p>
+                </li>
+                <li>
+                    <pre>
+            			<code class="html">
+<div class="d-flex p-2">I'm a flexbox container!</div>
+<div class="d-inline-flex p-2">I'm an inline flexbox container!</div>
+                        </code>
+            		</pre>
+                </li>
+            </ol>
         </section>
         <div w3-include-html="components/_navigation.html"></div>
     </div>
@@ -78,6 +345,23 @@
         $(function () {
             $.deck('.slide');
         });
+    </script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        jQuery(document).ready(function ($) {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block);
+            });
+
+            $("code").each(function () {
+                var re = new RegExp("<", "g");
+                var re2 = new RegExp(">", "g");
+                $(this).html($(this).html().replace(re, "&lt;").replace(re2, "&gt;"));
+
+
+            })
+        });
+
     </script>
     <script>
     </script>

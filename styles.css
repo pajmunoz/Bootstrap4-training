@@ -85,6 +85,9 @@ body {
  .hljs-type, .hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion {
     color: #f0a!important;
 }
-p span{
+p span,  h2 span, h3 span{
     color: #f0a!important;
+}
+.deck-prev-link,.deck-next-link{
+    color: black!important;
 }
