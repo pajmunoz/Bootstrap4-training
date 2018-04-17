@@ -101,7 +101,8 @@ figure {
 
 p span,
 h2 span,
-h3 span {
+h3 span, 
+li span {
     color: #f0a !important;
 }
 
