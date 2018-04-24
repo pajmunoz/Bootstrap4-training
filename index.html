@@ -42,14 +42,38 @@
                 <img width="200" src="bg/boot.png" alt="">
             </figure>
         </section>
+        <section class="slide" id="diferencias">
+            <h2>Diferencias entre versiones 3 y 4</h2>
+            <ol>
+                <li>En la version 4 exclusivamente usa <span>Sass</span> ya que se considera que compila más rápido que <span>Less</span>.</li>
+                <li>Bootstrap 4 no tiene soporte para internet explorer 8.</li>
+                <li>La versión 4 ha pasado de los pixeles a medidas relativas utilizando la unidad <span>“rem”</span></li>
+                <li>Bootstrap 4 no tiene <span>Glyphicons</span></li>
+                <li>Los diversos plugins de Bootstrap 4 estan escritos en <span data-toggle="tooltip" data-placement="top" title="Ecmascript: estandar de javascript 2015">ES6</span> </li>
+                <li>Bootstrap 4 incorpora nuevas clases para dar estilos a los botones, estilos para cabeceras, tablas.</li>
+                <li>La nueva versión incluye nuevas clases <span>(Utility classes)</span> que nos ayudaran a controlar los margin y padding</li>              
+            </ol>
+        </section>
+        <section class="slide" id="compatibilidad">
+            <h2>Compatibilidad</h2>
+            <p>Bootstrap 4  es soportado por las últimas versiones de los navegadores por defecto de las principales plataformas.</p>
+            <ol>
+                <li>Dispositivos</li>
+               <figure><img src="/_assets/img/compa.PNG" alt=""></figure>
+
+                <li>Desktop</li>
+                <figure><img src="/_assets/img/compa2.PNG" alt=""></figure>
+            </ol>
+            <p>Para revisar a fondo visitar <a href="https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/">https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/</a></p>
+        </section>
         <section class="slide" id="install">
             <h2>Instalación CDN (Content Delivery Network)</h2>
             <ol>
-                <li>Copia y pega la hoja de estilos <span>&lt;link&gt;</span>  en el <span>&lt;head&gt;</span> antes de cualquier otra.</li>
+                <li>Copiá y pegá la hoja de estilos <span>&lt;link&gt;</span>  en el <span>&lt;head&gt;</span> antes de cualquier otra.</li>
                 <pre><code class="html">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
                 </code></pre>
-                <li>Coloca un <span>&lt;script&gt;</span> casi al final de la página, justo antes de cerrar <span>&lt;/body&gt;</span></li>
+                <li>Colocá un <span>&lt;script&gt;</span> casi al final de la página, justo antes de cerrar <span>&lt;/body&gt;</span></li>
                 <pre><code class="html">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
                 </code></pre>
@@ -58,7 +82,7 @@
         <section class="slide" id="install2">
             <h2>Instalación SASS & compile</h2>
             <ol>
-                <li>Descarga los archivos fuente de <span>https://getbootstrap.com/</span></li>
+                <li>Descargá los archivos fuente de <span><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></span></li>
                 <figure><img src="\_assets\img.gif" alt="" width="400" srcset=""></figure>
                 <li>Utilizamos los archivos de la carpeta <span>sass</span></li>
                 <figure><img src="\_assets\img2.gif" alt="" width="400" srcset=""></figure>
@@ -87,7 +111,13 @@
                         al lado izquierdo.</p>
                 </li>
                 <li>
-                    <pre>
+                    <p data-height="300" data-theme-id="dark" data-slug-hash="wjGpRJ" data-default-tab="html,result" data-user="pajmunoz" data-embed-version="2"
+                        data-pen-title="wjGpRJ" class="codepen">See the Pen
+                        <a href="https://codepen.io/pajmunoz/pen/wjGpRJ/">wjGpRJ</a> by pablo (
+                        <a href="https://codepen.io/pajmunoz">@pajmunoz</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    <!--<pre>
                         <code class="html">
                         <div class="container">
                             <div class="row">
@@ -103,8 +133,25 @@
                             </div>
                         </div>
                         </code>
-                    </pre>
+                    </pre>-->
                 </li>
+            </ol>
+        </section>
+        <section class="slide" id="columnas">
+            <h2>Crear columnas facilmente</h2>
+            <ol>
+                <li>
+                    Es posible crear columnas con rapidez ya que Bootstrap organiza los elementos de manera flexible.
+                </li>
+                <li>Ejemplo:
+                    <p data-height="350" data-theme-id="dark" data-slug-hash="gzroRb" data-default-tab="html,result" data-user="pajmunoz" data-embed-version="2"
+                        data-pen-title="gzroRb" class="codepen">See the Pen
+                        <a href="https://codepen.io/pajmunoz/pen/gzroRb/">gzroRb</a> by pablo (
+                        <a href="https://codepen.io/pajmunoz">@pajmunoz</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </li>
+              
             </ol>
         </section>
         <section class="slide" id="5">
@@ -118,8 +165,14 @@
                         <span>'.offset-md-4'</span> mueve
                         <span>.col-md-4</span> 4 columnas hacia la derecha.</p>
                 </li>
-                <li>
-                    <pre>
+                <li>Ejemplo:
+                    <p data-height="450" data-theme-id="dark" data-slug-hash="ZoWvZj" data-default-tab="html,result" data-user="pajmunoz" data-embed-version="2"
+                        data-pen-title="ZoWvZj" class="codepen">See the Pen
+                        <a href="https://codepen.io/pajmunoz/pen/ZoWvZj/">ZoWvZj</a> by pablo (
+                        <a href="https://codepen.io/pajmunoz">@pajmunoz</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    <!--<pre>
             			<code class="html">
 <div class="container">
     <div class="row">
@@ -135,7 +188,8 @@
     </div>
 </div>
                         </code>
-            		</pre>
+                    </pre>-->
+                    
                 </li>                
             </ol>
         </section>
@@ -146,8 +200,14 @@
                     <h3>Breakpoints</h3>
                     <p>Además de establecer un breakpoint de la columna es necesario resetear el offset.</p>
                 </li>
-                <li>
-                    <pre>
+                <li>Ejemplo:
+                    <p data-height="450" data-theme-id="dark" data-slug-hash="PeNQoW" data-default-tab="html,result" data-user="pajmunoz" data-embed-version="2"
+                        data-pen-title="Bootstrap 4" class="codepen">See the Pen
+                        <a href="https://codepen.io/pajmunoz/pen/PeNQoW/">Bootstrap 4</a> by pablo (
+                        <a href="https://codepen.io/pajmunoz">@pajmunoz</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    <!--<pre>
                     			<code class="html">
 <div class="container">
     <div class="row">
@@ -156,19 +216,22 @@
     </div>
 </div>
                                 </code>
-                    		</pre>
+                    		</pre>-->
                 </li>
             </ol>
         </section>
         <section class="slide" id="7">
             <h2>Reordenar columnas</h2>
-            <ol>
-                <li>
-                    <h3>.ml- o .mr-</h3>
-                    <p>Se puede definir el margen.</p>
-                </li>
-                <li>
-                    <pre>
+            <ol>                
+                <li><h3>.ml- o .mr-</h3>
+                <p>Se puede definir el margen.</p>
+                    <p data-height="250" data-theme-id="dark" data-slug-hash="bMpLwa" data-default-tab="html,result" data-user="pajmunoz" data-embed-version="2"
+                        data-pen-title="bMpLwa" class="codepen">See the Pen
+                        <a href="https://codepen.io/pajmunoz/pen/bMpLwa/">bMpLwa</a> by pablo (
+                        <a href="https://codepen.io/pajmunoz">@pajmunoz</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    <!--<pre>
             			<code class="html">
 <div class="container">
     <div class="row">
@@ -185,7 +248,7 @@
     </div>
 </div>
                         </code>
-            		</pre>
+            		</pre>-->
                 </li>
                 <li>
                     <h3>Opciones</h3>
@@ -201,6 +264,49 @@
                 </li>
             </ol>
         </section>
+        <section class="slide" id="display">
+            <h2>Cambiar Display facilmente</h2>
+            <ol>
+                <li>Se puede cambiar el valor de <span>display</span> con facilidad entre viewports con <span>.d-*</span>
+<pre>
+<code class="html">
+    <div class="d-lg-none">oculta div al llegar al ancho de lg</div>
+    <div class="d-none d-lg-block">oculta div cuando el ancho es menor a lg</div>                    
+</code>
+</pre>
+                </li>
+                
+            </ol>
+            <ul>
+                <li>
+                    <code class="highlighter-rouge">.d-print-none</code>
+                </li>
+                <li>
+                    <code class="highlighter-rouge">.d-print-inline</code>
+                </li>
+                <li>
+                    <code class="highlighter-rouge">.d-print-inline-block</code>
+                </li>
+                <li>
+                    <code class="highlighter-rouge">.d-print-block</code>
+                </li>
+                <li>
+                    <code class="highlighter-rouge">.d-print-table</code>
+                </li>
+                <li>
+                    <code class="highlighter-rouge">.d-print-table-row</code>
+                </li>
+                <li>
+                    <code class="highlighter-rouge">.d-print-table-cell</code>
+                </li>
+                <li>
+                    <code class="highlighter-rouge">.d-print-flex</code>
+                </li>
+                <li>
+                    <code class="highlighter-rouge">.d-print-inline-flex</code>
+                </li>
+            </ul>
+        </section>
         <section class="slide" id="8">
             <h2>Flex</h2>
             <ol>  
@@ -208,8 +314,14 @@
                     <h3>Orden</h3>
                     <p>Se puede cambiar el orden en que se muestran los elementos con '.order'</p>
                 </li>
-                <li>
-                    <pre>
+                <li>Ejemplo: 
+                    <p data-height="265" data-theme-id="dark" data-slug-hash="GdZQGM" data-default-tab="html,result" data-user="pajmunoz" data-embed-version="2"
+                        data-pen-title="order" class="codepen">See the Pen
+                        <a href="https://codepen.io/pajmunoz/pen/GdZQGM/">order</a> by pablo (
+                        <a href="https://codepen.io/pajmunoz">@pajmunoz</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    <!--<pre>
                         <code class="html">
 <div class="d-flex flex-nowrap">
     <div class="order-3 p-2">First flex item</div>
@@ -217,9 +329,10 @@
     <div class="order-1 p-2">Third flex item</div>
 </div>
                     </code>
-        		</pre>
+        		</pre>-->
                 </li>
             </ol>
+            <p>Para saber mas sobre flexbox visita: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
         </section>
         <section class="slide" id="9">
             <h2>Flex</h2>
@@ -326,7 +439,7 @@
                 </li>
             </ol>
         </section>
-        <section class="slide" id="100">
+        <!--<section class="slide" id="100">
             <h2>Sass en bootstrap</h2>
             <ol>
                 <li>
@@ -343,6 +456,9 @@
             		</pre>
                 </li>
             </ol>
+        </section>-->
+        <section class="slide bg1" id="end">
+            <figure><img src="https://media.giphy.com/media/l3vR4yk0X20KimqJ2/giphy.gif" alt="" width="800"></figure>
         </section>
         <div w3-include-html="components/_navigation.html"></div>
     </div>
